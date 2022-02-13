@@ -1,0 +1,40 @@
+//Project Euler # 6
+
+//difference between the sum of the squares and the square of the sum
+//------------------------------------------------------------------------
+
+/*int sumSquares(int max){
+  int sumOfSquares = 0;
+
+  for (i = 1; i <= max; i++){
+    sumOfSquares += (i * i);
+  }
+
+  return sumOfSquares;
+  }*/
+    
+    
+
+int main() {
+  int sumOfSquares = 0;
+
+  for (i = 1; i <= 100; i++){
+    sumOfSquares += (i * i);
+  }
+
+  int squaredSum = 0;
+
+  for (i = 1; i <= 100; i++){
+    squaredSum += i;
+  }
+
+  squaredSum = (squaredSum * squaredSum);
+
+  int sumSquareDifference = (sumOfSquares - squaredSum);
+  printf("%d\n", sumOfSquares);
+  printf(" - %d\n", squaredSum);
+  printf("-------------");
+  printf("%d\n", sumSquareDifference);
+
+  return 0;
+}
